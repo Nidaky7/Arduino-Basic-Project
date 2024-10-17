@@ -1,0 +1,56 @@
+// ateş ölçerin ölçtüğü değer 36 ve altında ise yeşil led, 38-36 ise turuncu led, 38 üstü için kırmızı led yakma
+
+
+int yesil_led=10;
+int turuncu_led=9;
+int kirmizi_led=8;
+
+int sicaklik=50;
+
+
+void setup() {
+
+  pinMode(kirmizi_led,OUTPUT);
+  pinMode(turuncu_led,OUTPUT);
+  pinMode(yesil_led,OUTPUT);
+
+}
+
+void loop() {
+
+  if (sicaklik<=36)
+  {
+    digitalWrite(yesil_led,1);
+    
+    delay(1000);
+
+    digitalWrite(yesil_led,0);
+
+    delay(1000);
+
+  }
+  
+  else if (sicaklik>36 && sicaklik<=38)
+  {
+    digitalWrite(turuncu_led,1);
+
+    delay(1000);
+
+    digitalWrite(turuncu_led,0);
+
+    delay(1000);
+
+  }
+
+  else
+  {
+    digitalWrite(kirmizi_led,1);
+
+    delay(1000);
+
+    digitalWrite(kirmizi_led,0);
+
+    delay(1000);
+  }
+
+}
