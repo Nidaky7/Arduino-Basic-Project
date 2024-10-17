@@ -1,0 +1,71 @@
+//RGB led kullanarak farklı renk yakma
+
+void setup() {
+
+  Serial.begin(9600);
+
+  Serial.println("BASLA"); // seri mönitöre metin girmek için print kullanılır. Eğer alt satıra geçmesini istersek println kullanmamız gerekir.
+  Serial.println("*****");
+
+  pinMode(5,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(7,OUTPUT);
+
+
+}
+
+void loop() {
+
+  digitalWrite(5,0);
+  digitalWrite(6,1);
+  digitalWrite(7,0);
+
+  Serial.println("MOR");
+
+
+  delay(1000);
+
+  digitalWrite(5,1);
+  digitalWrite(6,0);
+  digitalWrite(7,0);
+
+  Serial.println("SARİ");
+
+  delay(1000);
+  
+  digitalWrite(5,0);
+  digitalWrite(6,0);
+  digitalWrite(7,1);
+
+  Serial.println("ACİK MAVİ");
+
+  delay(1000);
+
+  digitalWrite(5,1);
+  digitalWrite(6,1);
+  digitalWrite(7,0);
+
+  Serial.println("KİRMİZİ");
+
+  delay(1000);
+
+  digitalWrite(5,0);
+  digitalWrite(6,1);
+  digitalWrite(7,1);
+
+  Serial.println("MAVİ");
+
+  delay(1000);
+
+  digitalWrite(5,1);
+  digitalWrite(6,0);
+  digitalWrite(7,1);
+
+  Serial.println("YESİL");
+
+  delay(1000);
+
+  
+
+
+}
