@@ -6,16 +6,20 @@ int sari_led=10;
 
 void setup() { // setup kısmı yalnızca bir kez çalışan kod bölümüdür.
 
-  pinMode(kirmizi_led,OUTPUT);  // Output: mikrodenetleyiciden çıkış Input: mikrodenetleyiciye giriş(Sensörden gelen verinin mikrodenetleyiciye gönderilmesi olarak aklınızda tutabilirsiniz.)
-  pinMode(mavi_led,OUTPUT); //pinMode: pinlerinizin output mu input mu olduğunu belirtmenizi sağlayan komuttur.
+  pinMode(kirmizi_led,OUTPUT); 
+  pinMode(mavi_led,OUTPUT); 
   pinMode(sari_led,OUTPUT);
+
+// OUTPUT: mikrodenetleyici bu pinden çıkış sinyali gönderir. INPUT: mikrodenetleyici bu pinden giriş sinyali alır. (Sensörden gelen veriyi mikrodenetleyiciye gönderme şeklinde akılda tutulabilir.)
+// pinMode: Belirtilen pinin giriş (INPUT) mi çıkış (OUTPUT) mı olduğunu belirler.
+  
 
 }
 
-void loop() { // loop kısmı tekrarlanan kısımdır.
+void loop() { // loop kısmı, sürekli tekrar eden kod bölümüdür
 
   digitalWrite(kirmizi_led,1); // digitalWrite: Belirli bir pine HIGH (1) ya da LOW (0) lojik seviyesinde sinyal gönderir.
-  digitalWrite(mavi_led,1);
+  digitalWrite(mavi_led,1);  // HIGH, ilgili pini lojik olarak "1" seviyesine (5V), LOW ise "0" seviyesine (0V) çeker.
   digitalWrite(sari_led,1);
 
   delay(1000); // delay: bekleme süresini belirten kısımdır.
