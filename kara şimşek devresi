@@ -1,0 +1,38 @@
+int led_dizisi[]={3,4,5,6,7};
+// ledlerimi bağladığım pinleri bir dizi oluşturarak tanımladım
+
+void setup() {
+
+  Serial.begin(9600); // seri haberleşmeyi başlamak için, haberleşme için 9600 (genellikle basit projelerde sık kullanılan, stabil bir hızdır), komutunu kullandım
+
+  for (int i=0; i<5 ;i++)  // for döngüsü ile dizimi kullanarak pinlerimin Output şeklinde tanımladım
+  {
+    pinMode(led_dizisi[i], OUTPUT);
+
+  }
+
+}
+
+void loop() {
+
+  for (int i=0;i<5;i++) // for ile diziyi kullanarak her seferinde 100 milisaniye aralıklarla bir led yakılmasını sağladım
+  {
+    digitalWrite(led_dizisi[i],1);
+
+    delay(100);
+
+    digitalWrite(led_dizisi[i],0);
+
+  }
+  
+
+  for (int j=4; j>-1; j--) // ledlerimin baştan sona ve sondan başa gitmesini istediğim için bir de azalarak giden bir döngü kuruyorum
+  {
+    digitalWrite(led_dizisi[j],1);
+
+    delay(100);
+
+    digitalWrite(led_dizisi[j],0);
+  }
+
+}
