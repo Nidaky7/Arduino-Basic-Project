@@ -1,0 +1,29 @@
+int kirmizi_led=8;
+int mavi_led=9;
+int sari_led=10; 
+
+// pinMode kısmında kodların daha kolay anlaşılması ve biraz da olsa karışıklığı önlemek için ledlerin bağlandığı pinlere bir değişken atılabilir.
+
+void setup() { // setup kısmı yalnızca bir kez çalışan kod bölümüdür.
+
+  pinMode(kirmizi_led,OUTPUT);  // Output: mikrodenetleyiciden çıkış Input: mikrodenetleyiciye giriş(Sensörden gelen verinin mikrodenetleyiciye gönderilmesi olarak aklınızda tutabilirsiniz.)
+  pinMode(mavi_led,OUTPUT); //pinMode: pinlerinizin output mu input mu olduğunu belirtmenizi sağlayan komuttur.
+  pinMode(sari_led,OUTPUT);
+
+}
+
+void loop() { // loop kısmı tekrarlanan kısımdır.
+
+  digitalWrite(kirmizi_led,1); // digitalWrite: Belirli bir pine HIGH (1) ya da LOW (0) lojik seviyesinde sinyal gönderir.
+  digitalWrite(mavi_led,1);
+  digitalWrite(sari_led,1);
+
+  delay(1000); // delay: bekleme süresini belirten kısımdır.
+
+  digitalWrite(kirmizi_led,0);
+  digitalWrite(mavi_led,0);
+  digitalWrite(sari_led,0);
+
+  delay(1000);
+
+}
